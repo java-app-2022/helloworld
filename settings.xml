@@ -1,0 +1,22 @@
+<profiles>
+  <profile>
+    <id>java-hello-java-demo</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>java-hello-java-demo</id>
+        <url>https://java-hello-463146931926.d.codeartifact.us-east-1.amazonaws.com/maven/java-demo/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+
+<servers>
+  <server>
+    <id>java-hello-java-demo</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
