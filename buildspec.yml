@@ -8,7 +8,7 @@ phases:
     commands:
       - echo Nothing to do in the pre_build phase...
       - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain java-hello --domain-owner 463146931926 --query authorizationToken --output text`
-      - cat /root/.m2/settings.xml
+      - ls /root/.m2/
 
   build:
     commands:
