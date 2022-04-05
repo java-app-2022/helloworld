@@ -7,8 +7,10 @@ phases:
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
+      - cd /tmp/
+      - 
       - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain java-hello --domain-owner 463146931926 --query authorizationToken --output text`
-      - ls /root/.m2/
+      - cp settings.xml /root/
 
   build:
     commands:
@@ -17,7 +19,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - cat /root/.m2/settings.xml
+      
 artifacts:
   files:
     - target/helloworld-1.0.jar
