@@ -35,4 +35,13 @@
       </plugin>
     </plugins>
   </build>
+  
+  <distributionManagement>
+  <repository>
+    <id>java-hello-java-demo</id>
+    <name>java-hello-java-demo</name>
+    <url>https://java-hello-463146931926.d.codeartifact.us-east-1.amazonaws.com/maven/java-demo/</url>
+  </repository>
+</distributionManagement>
+  
 </project>
