@@ -19,4 +19,4 @@ phases:
       
 artifacts:
   files:
-    - target/helloworld-1.0.jar
+    - target/helloworld-1.1.jar
