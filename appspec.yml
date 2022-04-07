@@ -1,13 +1,9 @@
 version: 0.0
-
-os: linux
-
-files:
-  - source: /helloworld-1.1.jar
-    destination: /tmp
-
-hooks:
-  ApplicationStart:
-    - location: start-process.sh
-      timeout: 180
-      runas: root
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-1:463146931926::task-definition/java-demo-ec2:5"
+        LoadBalancerInfo:
+          ContainerName: "javaContainer"
+          ContainerPort: 8080
