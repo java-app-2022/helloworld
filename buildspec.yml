@@ -19,7 +19,7 @@ phases:
       
 artifacts:
   files:
-    - target/helloworld-1.1.jar
+    - target/helloworld-1.2.jar
     - appspec.yml
     - scripts/start-process.sh
     - scripts/stop-process.sh
