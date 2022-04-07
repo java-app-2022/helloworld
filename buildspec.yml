@@ -20,3 +20,7 @@ phases:
 artifacts:
   files:
     - target/helloworld-1.1.jar
+    - appspec.yml
+    - scripts/start-process.sh
+    - scripts/stop-process.sh
+  discard-paths: yes
